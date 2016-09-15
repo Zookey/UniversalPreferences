@@ -13,7 +13,7 @@ allprojects {
     }
 }
 ```
-and:
+and to your app build.gradle:
 ```
 dependencies {
     compile 'com.github.zookey:universalpreferences:0.0.2'
