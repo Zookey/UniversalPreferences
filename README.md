@@ -1,7 +1,9 @@
 # UniversalPreferences
 UniversalPreferences is simple Android library that allows you to use Shared Preferences in an easy way. 
 
-The main goal of this library is to reduce boilerplate code when you work with Shared Preferences. You only need to initalize library and then literally in one line of the code you can store or retrive any type of values that Shared Preferences allows.
+This library allows you to easily to store and retrive values from SharedPreferences without creating lots of boilerplate.
+
+
 
 # Usage
 
