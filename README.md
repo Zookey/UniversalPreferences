@@ -4,6 +4,22 @@ UniversalPreferences is simple Android library that allows you to use Shared Pre
 The main goal of this library is to reduce boilerplate code when you work with Shared Preferences. You only need to initalize library and then literally in one line of the code you can store or retrive any type of values that Shared Preferences allows.
 
 # Usage
+
+Add to your module's build.gradle:
+```
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+and:
+```
+dependencies {
+    compile 'com.github.zookey:universalpreferences:0.0.2'
+}
+```
+
 First you do need to initalize this libarary inside onCreate of the Application class of your project.
 ```Java
 public class UniversalPreferencesApplication extends Application {
