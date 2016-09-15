@@ -35,30 +35,30 @@ Now you can use UniversalPreferences library in any class of your project.
 
 UniversalPreferences library is "universal" at accepting object types, so there is only one method to store and only one method to retrive values.
 
-###### Store and retrive String
+##### Store and retrive String
 ```Java
 UniversalPreferences.getInstance().put("string", "some value");
 String string =  UniversalPreferences.getInstance().get("string");
 ```
-###### Store and retrive Integer
+##### Store and retrive Integer
 ```Java
 UniversalPreferences.getInstance().put("int", 30);
 int value =  UniversalPreferences.getInstance().get("int");
 ```
 
-###### Store and retrive Float
+##### Store and retrive Float
 ```Java
 UniversalPreferences.getInstance().put("float", 3.0f);
 float valueFloat = UniversalPreferences.getInstance().get("float");
 ```
 
-###### Store and retrive Boolean
+##### Store and retrive Boolean
 ```Java
 UniversalPreferences.getInstance().put("bool", true);
 boolean bool = UniversalPreferences.getInstance().get("bool");
 ```
 
-###### Store and retrive Set<String>
+##### Store and retrive Set<String>
 ```Java
 Set<String> set = new HashSet<String>();
 set.add("test 1");
