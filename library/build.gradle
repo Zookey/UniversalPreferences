@@ -6,7 +6,7 @@ group='com.github.zookey'
 ext {
     PUBLISH_GROUP_ID = 'com.zookey'
     PUBLISH_ARTIFACT_ID = 'universalpreferences'
-    PUBLISH_VERSION = '0.0.2'
+    PUBLISH_VERSION = '0.0.3'
 }
 
 android {
@@ -14,7 +14,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
