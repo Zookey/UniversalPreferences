@@ -40,24 +40,24 @@ UniversalPreferences library is "universal" at accepting object types, so there 
 ##### Store and retrive String
 ```Java
 UniversalPreferences.getInstance().put("string", "some value");
-String string =  UniversalPreferences.getInstance().get("string");
+String stringValue = UniversalPreference.getInstance().get("string", "");
 ```
 ##### Store and retrive Integer
 ```Java
 UniversalPreferences.getInstance().put("int", 30);
-int value =  UniversalPreferences.getInstance().get("int");
+int integerValue = UniversalPreference.getInstance().get("int", 0);
 ```
 
 ##### Store and retrive Float
 ```Java
 UniversalPreferences.getInstance().put("float", 3.0f);
-float valueFloat = UniversalPreferences.getInstance().get("float");
+float valueFloat = UniversalPreference.getInstance().get("float", 0.0f);
 ```
 
 ##### Store and retrive Boolean
 ```Java
 UniversalPreferences.getInstance().put("bool", true);
-boolean bool = UniversalPreferences.getInstance().get("bool");
+boolean bool = UniversalPreference.getInstance().get("bool", false);
 ```
 
 ##### Store and retrive Set<String>
@@ -66,5 +66,5 @@ Set<String> set = new HashSet<String>();
 set.add("test 1");
 set.add("test 2");
 UniversalPreferences.getInstance().put("set", set);
-Set<String> savedSet = UniversalPreferences.getInstance().get("set");
+Set<String> savedSet = UniversalPreference.getInstance().get("set", new HashSet<String>);
 ```
