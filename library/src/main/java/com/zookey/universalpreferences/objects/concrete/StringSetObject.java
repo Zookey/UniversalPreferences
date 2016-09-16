@@ -21,4 +21,9 @@ public class StringSetObject implements UniversalObject {
     public void put(String key, Object value) {
         prefs.edit().putStringSet(key, (Set<String>) value).commit();
     }
+
+    @Override
+    public Object get(String key, Object defaultValue) {
+        return prefs.getStringSet(key, (Set<String>) defaultValue);
+    }
 }

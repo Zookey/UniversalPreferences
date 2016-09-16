@@ -78,14 +78,32 @@ public class UniversalPreferences {
         }
     }
 
-    public <T extends Object> T get(String key){
-        if(contains(key)){
-            Map<String, ?> map = getAll();
-            return (T) map.get(key);
+
+    public <T extends Object> T get(String key, Object defaultValue){
+        UniversalObject universalObject;
+        if(defaultValue instanceof String){
+            universalObject = new StringObject(prefs);
+            return (T) universalObject.get(key, defaultValue);
+        } else if(defaultValue instanceof  Boolean) {
+            universalObject = new BooleanObject(prefs);
+            return (T) universalObject.get(key, defaultValue);
+        } else if(defaultValue instanceof  Integer) {
+            universalObject = new IntegerObject(prefs);
+            return (T) universalObject.get(key, defaultValue);
+        } else if(defaultValue instanceof  Long) {
+            universalObject = new LongObject(prefs);
+            return (T) universalObject.get(key, defaultValue);
+        } else if(defaultValue instanceof  Float) {
+            universalObject = new FloatObject(prefs);
+            return (T) universalObject.get(key, defaultValue);
+        } else if(defaultValue instanceof Set){
+            universalObject = new StringSetObject(prefs);
+            return (T) universalObject.get(key, defaultValue);
         } else{
-            throw new NoSuchElementException("Value with given key does not exist.");
+            throw new ClassCastException(defaultValue.getClass().getName()+" is not allowed type of object.");
         }
     }
+
 
     public Map<String, ?> getAll(){
         return prefs.getAll();

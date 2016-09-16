@@ -11,4 +11,6 @@ public interface UniversalObject {
 
     void put(String key, Object value);
 
+    Object get(String key, Object defaultValue);
+
 }

@@ -19,4 +19,9 @@ public class LongObject implements UniversalObject {
     public void put(String key, Object value) {
         prefs.edit().putLong(key, (Integer) value).commit();
     }
+
+    @Override
+    public Object get(String key, Object defaultValue) {
+        return prefs.getLong(key, (Long) defaultValue);
+    }
 }

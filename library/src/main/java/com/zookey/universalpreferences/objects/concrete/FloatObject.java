@@ -19,4 +19,9 @@ public class FloatObject implements UniversalObject {
     public void put(String key, Object value) {
         prefs.edit().putFloat(key, (Float) value).commit();
     }
+
+    @Override
+    public Object get(String key, Object defaultValue) {
+        return prefs.getFloat(key, (Float) defaultValue);
+    }
 }
