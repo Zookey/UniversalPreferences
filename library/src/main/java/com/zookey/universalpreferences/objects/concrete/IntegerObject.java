@@ -17,7 +17,7 @@ public class IntegerObject implements UniversalObject {
 
     @Override
     public void put(String key, Object value) {
-        prefs.edit().putInt(key, (Integer) value).commit();
+        prefs.edit().putInt(key, (Integer) value).apply();
     }
 
     @Override

@@ -17,7 +17,7 @@ public class StringObject implements UniversalObject {
 
     @Override
     public void put(String key, Object value) {
-        prefs.edit().putString(key, (String) value).commit();
+        prefs.edit().putString(key, (String) value).apply();
     }
 
     @Override

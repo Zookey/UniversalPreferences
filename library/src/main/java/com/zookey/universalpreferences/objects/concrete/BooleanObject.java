@@ -16,7 +16,7 @@ public class BooleanObject implements UniversalObject {
     }
     @Override
     public void put(String key, Object value) {
-        prefs.edit().putBoolean(key, (Boolean) value).commit();
+        prefs.edit().putBoolean(key, (Boolean) value).apply();
     }
 
     @Override

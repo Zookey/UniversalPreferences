@@ -17,7 +17,7 @@ public class FloatObject implements UniversalObject {
 
     @Override
     public void put(String key, Object value) {
-        prefs.edit().putFloat(key, (Float) value).commit();
+        prefs.edit().putFloat(key, (Float) value).apply();
     }
 
     @Override

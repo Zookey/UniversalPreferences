@@ -114,10 +114,10 @@ public class UniversalPreferences {
     }
 
     public void clear(){
-        prefs.edit().clear().commit();
+        prefs.edit().clear().apply();
     }
 
     public void remove(String key){
-        prefs.edit().remove(key).commit();
+        prefs.edit().remove(key).apply();
     }
 }

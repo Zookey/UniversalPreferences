@@ -47,6 +47,6 @@ public class MainActivity extends AppCompatActivity {
         //This will get default value, since there is no value with this key
         int noValue =  UniversalPreferences.getInstance().get("novalue", 0);
         Log.d("int", String.valueOf(noValue));
-        
+
     }
 }
